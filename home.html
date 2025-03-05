@@ -3,33 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nuttanicha web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="home.css">
-
+    <link rel="stylesheet" href="css\home.css">
 </head>
 <body>
+    <!-- Overlay Section -->
+    <div id="overlay">
+        <img src="Pic/Web-pic2.gif" id="pic1" class="overlay-img">
+        <img src="Pic/Web-pic1.gif" id="pic2" class="overlay-img" onclick="hideImages()">
+    </div>
+
+    <!-- Web Content Section -->
     <header>
-        <h1>My Portfolio</h1>
+        <div class="home-icon">
+            <a href="home.html"><i class="fa-solid fa-house"></i></a>
+        </div>
         <ul>
-            <li>ผลงาน</li>
-            <li>การประกวด</li>
-            <li>ประสบการณ์</li>
+            <li><a href="Portfolio.html"><span>Portfolio</span></a></li>
+            <li>Contests</li>
+            <li>Experiences</li>
         </ul>
     </header>
+
     <div class="container">
         <div class="left">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Here you will find my works, experiences, and achievements.</p>
+            <h1>Nuttanicha Loapet</h1>
+            <p>เว็บไชต์นี้เป็นการแสดงผลงานที่สะสม โดยประกอบด้วย</p>
+            <p>• ผลงานที่ผลิตขึ้นเพื่อพัฒนาทักษะ</p>
+            <p>• การประกวดที่เคยเข้าร่วม</p>
+            <p>• ประสบการณ์ไม่ว่าจะเป็นปริญญานิพนธ์ การฝึกงาน/สอน</p>
         </div>
         <div class="right">
-            <img src="" alt="Profile Picture">
+            <img src="Pic/test-resume1.png" alt="Profile Picture">
         </div>
     </div>
+
     <footer>
         <h1>Contact us</h1>
         <p>Email: nuttanicha.dev@gmail.com</p>
-        <p>Phone: 082-5418499</p>
+        <p>Phone: 66+ 82-541-8499</p>
         <a href="https://www.facebook.com/profile.php?id=100003182149854" target="_blank">
             <i class="fa-brands fa-facebook"></i>
         </a>
@@ -41,6 +54,16 @@
         </a>
         <a href="https://github.com/Kam-Nuttanicha" target="_blank">
             <i class="fa-brands fa-github"></i>
+        </a>
     </footer>
+
+    <script>
+        function hideImages() {
+            document.getElementById('overlay').style.display = 'none';
+            document.querySelector('header').style.display = 'block';
+            document.querySelector('.container').style.display = 'flex';
+            document.querySelector('footer').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

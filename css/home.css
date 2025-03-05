@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: flow; 
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+#pic1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+
+#pic2 {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the screen */
+    max-width: 50vw; /* 1/9th of the screen width */
+    max-height: 50vh; /* 1/9th of the screen height */
+    cursor: pointer;
+    object-fit: contain; /* Ensure the aspect ratio is maintained */
+    z-index: 1000; /* Make sure pic2 is above pic1 */
+}
+
+header {
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: none; /* Hide header initially */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* ลิ้งค์ไปหน้าอื่น */
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.home-icon {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.home-icon a {
+    color: white;
+    font-size: 24px;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+    display: none; /* Hide the container initially */
+}
+
+.left {
+    flex: 1;
+    padding: 60px;
+}
+
+.left h1 {
+    font-size: 36px;
+}
+
+.left p {
+    font-size: 18px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: none; /* Hide footer initially */
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+}
