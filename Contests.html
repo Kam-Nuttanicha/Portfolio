@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuttanicha Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/Contests.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="home-icon">
+            <a href="home.html"><i class="fa-solid fa-house"></i></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="Contests.html">Contests</a></li>
+                <li><a href="Experiences.html">Experiences</a></li>
+                <li><a href="Portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <!-- Content Sections -->
+        <div id="Game" class="Game">
+            <h1>Game Jam 2025</h1>
+            <p>This game is part of Game Jam 2025 "Chronicle of Khlong San: A Journey Through Time"</p>
+            <div class="center-content">
+                <div>
+                    <a href="https://kammam.itch.io/thewhisperinglegacyofkhlongsan" target="_blank">
+                        <button class="link-button">Go to The Whispering Legacy</button>
+                    </a>
+                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/iIiev33s8J4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            
+                <div class="image-slider">
+                    <button class="arrow-left" onclick="scrollLeft()">&#8592;</button>
+                    <div class="image-row1">
+                        <img src="Pic/Game1.png" alt="pic1">
+                        <img src="Pic/Game2.jpg" alt="pic2">
+                        <img src="Pic/Game3.jpg" alt="pic3">
+                        <img src="Pic/Game7.jpg" alt="pic7">
+                        <img src="Pic/Game4.png" alt="pic4">
+                        <img src="Pic/Game5.png" alt="pic5">
+                        <img src="Pic/Game6.png" alt="pic6">
+                    </div>
+                    <button class="arrow-right" onclick="scrollRight()">&#8594;</button>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <h1>Contact</h1>
+        <p>Email : <a href="mailto:nuttanicha.dev@gmail.com">nuttanicha.dev@gmail.com</a></p>
+        <p>Phone : +66 82-541-8499</p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100003182149854" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nuttanichaloapet00" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@rosysparkle.craft0" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://github.com/Kam-Nuttanicha" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+    </footer>
+
+<script>
+    function scrollLeft() {
+        const container = document.querySelector('.image-row1');
+        if (container.scrollLeft > 0) {
+            container.scrollBy({
+                left: -300,  // เลื่อน 300px ไปทางซ้าย
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    function scrollRight() {
+        const container = document.querySelector('.image-row1');
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        if (container.scrollLeft < maxScrollLeft) {
+            container.scrollBy({
+                left: 300,  // เลื่อน 300px ไปทางขวา
+                behavior: 'smooth'
+            });
+        }
+    }
+    
+    
+</script>
+</body>
+</html>
+

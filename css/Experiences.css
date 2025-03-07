@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto; 
+}
+
+header {
+    display: flex; /* จัดให้ header ใช้ flexbox */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* ให้ ul อยู่ในแนวเดียวกัน */
+}
+
+header ul li {
+    margin: 0 15px; /* กำหนดระยะห่างของเมนู */
+    display: inline-block; /* ให้เป็นบรรทัดเดียวกัน */
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.home-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* จัดให้ไอคอนอยู่ตรงกลางของ header */
+}
+
+.home-icon a {
+    color: white;
+    font-size: 24px;
+}
+
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+footer a:hover {
+    color: #ffcc00; /* เปลี่ยนสีเมื่อ hover */
+}
+
+
+.image-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างรูปภาพในแถวเดียวกัน */
+    margin-top: 20px; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+.image-row img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+.image-row1 img {
+    width: auto;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+.image-row1 {
+    display: flex; /* ใช้ flexbox */
+    justify-content: center; /* จัดรูปภาพให้อยู่กลาง */
+    align-items: center; /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลางแนวตั้ง */
+    gap: 20px; /* เพิ่มระยะห่างระหว่างรูปภาพ */
+    margin-top: 20px; /* เพิ่มระยะห่างระหว่างแถว */
+}
+
+.image-row p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px;
+}
+.Internship {
+    background-color: #FFDDDD; /* สีชมพูอ่อน */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.Thesis {
+    background-color: #E6CCFF; /* สีม่วงอ่อน */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* เมนูด้านข้าง (Sidebar) */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 20px 10px; /* เพิ่ม padding บน-ล่าง เพื่อให้ปุ่มสูงขึ้น */
+    height: 50px; /* หรือกำหนดความสูงแน่นอน */
+    background-color: #666;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    line-height: 50px; /* จัดให้ข้อความอยู่กึ่งกลางในปุ่ม */
+}
+
+
+.sidebar ul li a:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* ทำให้เนื้อหามีระยะห่างจาก Sidebar */
+.Internship, .Thesis {
+    margin-left: 180px; /* ให้เนื้อหาถอยจาก Sidebar */
+    margin-right: 10px; /* เว้นระยะจากขอบขวา 10px */
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 190px); /* คำนวณขนาดใหม่ (180px sidebar + 10px margin-right) */
+    max-width: none;
+    box-sizing: border-box;
+}
+
+
+
+/* เลื่อนหน้าเว็บแบบ Smooth เมื่อกดลิงก์ */
+html {
+    scroll-behavior: smooth;
+} 
+
+.video {
+    width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+.video-pdf-container {
+    display: flex;
+    justify-content: center;  /* จัดให้อยู่กึ่งกลาง */
+    align-items: center;  /* จัดให้อยู่แนวเดียวกัน */
+    gap: 40px;  /* เพิ่มระยะห่างระหว่างวิดีโอกับ PDF */
+    margin-top: 20px;
+    flex-wrap: wrap; /* ป้องกันปัญหาเนื้อหาเกินขอบจอ */
+}
+
+.video1 {
+    width: 27%; /* ปรับขนาดวิดีโอ */
+    height: auto;
+}
+
+.pdf-viewer {
+    width: 40%; /* ปรับขนาด PDF */
+    height: 500px;
+    border: 1px solid #ccc;
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง (ถ้าจำเป็น) */
+    margin-top: 10px; /* เพิ่มระยะห่างด้านบน */
+}
+.link-button1 {
+    background-color: #f37f12; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.link-button1:hover {
+    background-color: #f37f12;
+}

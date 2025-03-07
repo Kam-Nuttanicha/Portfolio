@@ -1,0 +1,311 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: auto; 
+}
+
+header {
+    display: flex; /* จัดให้ header ใช้ flexbox */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* ให้ ul อยู่ในแนวเดียวกัน */
+}
+
+header ul li {
+    margin: 0 15px; /* กำหนดระยะห่างของเมนู */
+    display: inline-block; /* ให้เป็นบรรทัดเดียวกัน */
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.home-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%); /* จัดให้ไอคอนอยู่ตรงกลางของ header */
+}
+
+.home-icon a {
+    color: white;
+    font-size: 24px;
+}
+
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+footer a:hover {
+    color: #ffcc00; /* เปลี่ยนสีเมื่อ hover */
+}
+
+.Gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างแต่ละแถวของรูปภาพ */
+    max-width: 800px;
+    margin: auto;
+}
+
+.image-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างรูปภาพในแถวเดียวกัน */
+    margin-top: 20px; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+.image-row img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* ซ่อนส่วนเกินที่เลื่อนออกมา */
+}
+.image-row1 {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    overflow-x: auto;  /* ให้สามารถเลื่อนทางแนวนอนได้ */
+    scroll-behavior: smooth;
+    white-space: nowrap; /* รูปภาพไม่แยกบรรทัด */
+    padding-bottom: 10px; /* ปรับช่องว่างด้านล่างให้ดีขึ้น */
+}
+
+.image-row1 img {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
+
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+}
+
+.arrow-left:hover, .arrow-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.image-row p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 15px;
+}
+.App {
+    background-color: #FFDDDD; /* สีชมพูอ่อน */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.Animation {
+    background-color: #E6CCFF; /* สีม่วงอ่อน */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.Gallery {
+    background-color: #D6EEFF; /* สีฟ้าอ่อน */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+/* เมนูด้านข้าง (Sidebar) */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    padding: 20px 10px; /* เพิ่ม padding บน-ล่าง เพื่อให้ปุ่มสูงขึ้น */
+    height: 50px; /* หรือกำหนดความสูงแน่นอน */
+    background-color: #666;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+    line-height: 50px; /* จัดให้ข้อความอยู่กึ่งกลางในปุ่ม */
+}
+
+
+.sidebar ul li a:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* ทำให้เนื้อหามีระยะห่างจาก Sidebar */
+.App, .Animation, .Gallery {
+    margin-left: 180px; /* ให้เนื้อหาถอยจาก Sidebar */
+    margin-right: 10px; /* เว้นระยะจากขอบขวา 10px */
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 190px); /* คำนวณขนาดใหม่ (180px sidebar + 10px margin-right) */
+    max-width: none;
+    box-sizing: border-box;
+}
+
+
+
+/* เลื่อนหน้าเว็บแบบ Smooth เมื่อกดลิงก์ */
+html {
+    scroll-behavior: smooth;
+} 
+
+.video {
+    width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+.video1 {
+    width: 20%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+.link-button {
+    background-color: #4CAF50; /* สีเขียว */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.link-button:hover {
+    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
+}
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.center-content iframe {
+    margin-top: 10px;
+}
+
+.center-content .link-button {
+    margin-top: 10px;
+}
+.Game{
+    padding: 0 30px;
+}

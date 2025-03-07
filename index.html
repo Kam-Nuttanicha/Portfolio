@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuttanicha web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css\home.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <!-- Overlay Section -->
@@ -20,19 +20,21 @@
             <a href="home.html"><i class="fa-solid fa-house"></i></a>
         </div>
         <ul>
-            <li><a href="Portfolio.html"><span>Portfolio</span></a></li>
-            <li>Contests</li>
-            <li>Experiences</li>
+            <li><a href="Contests.html">Contests</a></li>
+            <li><a href="Experiences.html">Experiences</a></li>
+            <li><a href="Portfolio.html">Portfolio</a></li>
         </ul>
     </header>
 
     <div class="container">
         <div class="left">
             <h1>Nuttanicha Loapet</h1>
-            <p>เว็บไชต์นี้เป็นการแสดงผลงานที่สะสม โดยประกอบด้วย</p>
-            <p>• ผลงานที่ผลิตขึ้นเพื่อพัฒนาทักษะ</p>
-            <p>• การประกวดที่เคยเข้าร่วม</p>
-            <p>• ประสบการณ์ไม่ว่าจะเป็นปริญญานิพนธ์ การฝึกงาน/สอน</p>
+            <p>This website showcases a collection of work, including:</p>
+            <ul>
+                <li>📌 Works created to develop skills, such as app development, animation, and photography.</li>
+                <li>🏆 Game competitions participated in.</li>
+                <li>🎓 Experiences, including thesis projects, internships, and teaching.</li>
+            </ul>
         </div>
         <div class="right">
             <img src="Pic/test-resume1.png" alt="Profile Picture">
@@ -40,27 +42,28 @@
     </div>
 
     <footer>
-        <h1>Contact us</h1>
-        <p>Email: nuttanicha.dev@gmail.com</p>
-        <p>Phone: 66+ 82-541-8499</p>
-        <a href="https://www.facebook.com/profile.php?id=100003182149854" target="_blank">
-            <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/nuttanichaloapet00" target="_blank">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://www.youtube.com/@rosysparkle.craft0" target="_blank">
-            <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://github.com/Kam-Nuttanicha" target="_blank">
-            <i class="fa-brands fa-github"></i>
-        </a>
+        <h1>Contact</h1>
+        <p>Email :<a href="mailto:nuttanicha.dev@gmail.com">nuttanicha.dev@gmail.com</a></p>
+        <p>Phone :<a href="tel:+66825418499">+66 82-541-8499</a></p>
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100003182149854" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/nuttanichaloapet00" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/@rosysparkle.craft0" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://github.com/Kam-Nuttanicha" target="_blank">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
     </footer>
 
     <script>
         function hideImages() {
             document.getElementById('overlay').style.display = 'none';
-            document.querySelector('header').style.display = 'block';
             document.querySelector('.container').style.display = 'flex';
             document.querySelector('footer').style.display = 'block';
         }
