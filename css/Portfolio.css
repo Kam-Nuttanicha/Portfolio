@@ -4,14 +4,15 @@ body {
     padding: 0;
     overflow: auto; 
     color: #03038d;
+    background:  #fcf2dd;
 }
 
 header {
-    display: flex; /* จัดให้ header ใช้ flexbox */
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-    align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
     width: 100%;
-    background: #333;
+    background: linear-gradient(to bottom,  #1d61ff ,#3c8af8);
     color: white;
     padding: 15px;
     text-align: center;
@@ -73,6 +74,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
 }
 
 footer a {
@@ -182,7 +184,7 @@ footer a:hover {
     display: block;
     padding: 20px 10px; /* เพิ่ม padding บน-ล่าง เพื่อให้ปุ่มสูงขึ้น */
     height: 50px; /* หรือกำหนดความสูงแน่นอน */
-    background-color: #666;
+    background-color: #841fa0;
     border-radius: 5px;
     text-align: center;
     transition: 0.3s;
@@ -191,7 +193,7 @@ footer a:hover {
 
 
 .sidebar ul li a:hover {
-    background-color: #ffcc00;
+    background-color: #ffd83d;
     color: black;
 }
 
@@ -236,7 +238,7 @@ html {
     color: aliceblue;
 }
 .ui {
-    background-color: #FFF5E1; /* สีครีม */
+    background-color: #ffe4ae; /* สีครีม */
     padding: 20px;
     border-radius: 10px;
     margin-left: 180px; /* ให้เนื้อหาถอยจาก Sidebar */

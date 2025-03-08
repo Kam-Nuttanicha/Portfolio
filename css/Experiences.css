@@ -3,18 +3,21 @@ body {
     margin: 0;
     padding: 0;
     overflow: auto; 
+    color: #03038d;
+    background:  #fcf2dd;
 }
 
 header {
-    display: flex; /* จัดให้ header ใช้ flexbox */
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-    align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
     width: 100%;
     background: #333;
     color: white;
     padding: 15px;
     text-align: center;
     position: relative;
+    background: linear-gradient(to bottom,  #1d61ff ,#3c8af8);
 }
 
 header ul {
@@ -68,10 +71,10 @@ nav ul li a {
 /* Footer Styling */
 footer {
     width: 100%;
-    background: #333;
     color: white;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
 }
 
 footer a {
@@ -124,7 +127,7 @@ footer a:hover {
     margin: 0 15px;
 }
 .Internship {
-    background-color: #FFDDDD; /* สีชมพูอ่อน */
+    background-color: #b5fef9;
     padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
@@ -132,7 +135,7 @@ footer a:hover {
 }
 
 .Thesis {
-    background-color: #E6CCFF; /* สีม่วงอ่อน */
+    background-color: #edffcc; 
     padding: 20px;
     border-radius: 10px;
     margin: 20px auto;
@@ -167,7 +170,7 @@ footer a:hover {
     display: block;
     padding: 20px 10px; /* เพิ่ม padding บน-ล่าง เพื่อให้ปุ่มสูงขึ้น */
     height: 50px; /* หรือกำหนดความสูงแน่นอน */
-    background-color: #666;
+    background-color: #841fa0;
     border-radius: 5px;
     text-align: center;
     transition: 0.3s;
@@ -176,7 +179,7 @@ footer a:hover {
 
 
 .sidebar ul li a:hover {
-    background-color: #ffcc00;
+    background-color: #ffd83d;
     color: black;
 }
 

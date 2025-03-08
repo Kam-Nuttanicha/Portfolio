@@ -1,47 +1,20 @@
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 999;
-}
-
-#pic1 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-}
-
-#pic2 {
-    position: absolute;
-    bottom: 0; /* Position at the bottom of the screen */
-    max-width: 50vw; /* 1/9th of the screen width */
-    max-height: 50vh; /* 1/9th of the screen height */
-    cursor: pointer;
-    object-fit: contain; /* Ensure the aspect ratio is maintained */
-    z-index: 1000; /* Make sure pic2 is above pic1 */
-}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow: auto;
+    color: #03038d;
+    background:  #fcf2dd;
 }
 
+/* Header Styling */
 header {
     display: flex; /* จัดให้ header ใช้ flexbox */
     justify-content: center; /* จัดให้อยู่ตรงกลาง */
     align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
     width: 100%;
-    background: #333;
-    color: white;
+    background: linear-gradient(to bottom,  #1d61ff ,#3c8af8);
+    color: #ffffff;
     padding: 15px;
     text-align: center;
     position: relative;
@@ -76,6 +49,7 @@ header ul li a {
     color: white;
     font-size: 24px;
 }
+
 
 /* Navigation Menu */
 nav ul {
@@ -139,10 +113,10 @@ nav ul li a {
 /* Footer Styling */
 footer {
     width: 100%;
-    background: #333;
     color: white;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
 }
 
 footer a {
@@ -165,10 +139,3 @@ footer a:hover {
     margin: 0 10px;
     font-size: 24px;
 }
-a {
-    text-decoration: none;
-    color: inherit;
-  }
-  a span {
-    cursor: pointer; /* ทำให้ดูเหมือนปุ่มกด */
-  }

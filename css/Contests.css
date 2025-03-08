@@ -3,14 +3,16 @@ body {
     margin: 0;
     padding: 0;
     overflow: auto; 
+    color: #03038d;
+    background:  #fcf2dd;
 }
 
 header {
-    display: flex; /* จัดให้ header ใช้ flexbox */
-    justify-content: center; /* จัดให้อยู่ตรงกลาง */
-    align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: linear-gradient(to bottom,  #1d61ff ,#3c8af8);
     width: 100%;
-    background: #333;
     color: white;
     padding: 15px;
     text-align: center;
@@ -72,6 +74,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
+    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
 }
 
 footer a {
