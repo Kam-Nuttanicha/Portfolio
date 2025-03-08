@@ -1,3 +1,35 @@
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+ 
+#pic1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+ 
+#pic2 {
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the screen */
+    max-width: 50vw; /* 1/9th of the screen width */
+    max-height: 50vh; /* 1/9th of the screen height */
+    cursor: pointer;
+    object-fit: contain; /* Ensure the aspect ratio is maintained */
+    z-index: 1000; /* Make sure pic2 is above pic1 */
+}
+ 
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,69 +38,65 @@ body {
     color: #03038d;
     background:  #fcf2dd;
 }
-
-/* Header Styling */
+ 
 header {
     display: flex; /* จัดให้ header ใช้ flexbox */
     justify-content: center; /* จัดให้อยู่ตรงกลาง */
     align-items: center; /* จัดให้เมนูอยู่ตรงกลาง */
     width: 100%;
     background: linear-gradient(to bottom,  #1d61ff ,#3c8af8);
-    color: #ffffff;
+    color: white;
     padding: 15px;
     text-align: center;
     position: relative;
 }
-
+ 
 header ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex; /* ให้ ul อยู่ในแนวเดียวกัน */
 }
-
+ 
 header ul li {
     margin: 0 15px; /* กำหนดระยะห่างของเมนู */
     display: inline-block; /* ให้เป็นบรรทัดเดียวกัน */
 }
-
+ 
 header ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
 }
-
+ 
 .home-icon {
     position: absolute;
     left: 20px;
     top: 50%;
     transform: translateY(-50%); /* จัดให้ไอคอนอยู่ตรงกลางของ header */
 }
-
+ 
 .home-icon a {
     color: white;
     font-size: 24px;
 }
-
-
-/* Navigation Menu */
+ 
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
-
+ 
 nav ul li a {
     text-decoration: none;
     color: white;
 }
-
-/* Main Content */
+ 
 .container {
     display: flex;
     width: 80%;
@@ -81,7 +109,7 @@ nav ul li a {
     flex: 1;
     padding: 20px;
 }
-
+ 
 .left h1 {
     font-size: 36px;
     color: #333;
@@ -95,42 +123,41 @@ nav ul li a {
 .left ul {
     padding-left: 20px;
 }
-
+ 
 .right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+ 
 .right img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
     object-fit: cover;
 }
+ 
 
-/* Footer Styling */
 footer {
     width: 100%;
+    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
     color: white;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
 }
-
+ 
 footer a {
     color: white;
     text-decoration: none;
     margin: 0 10px;
     font-size: 18px;
 }
-
+ 
 footer a:hover {
     color: #ffcc00;
 }
 
-/* Social Media Icons */
 .social-links {
     margin-top: 10px;
 }
@@ -139,3 +166,12 @@ footer a:hover {
     margin: 0 10px;
     font-size: 24px;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+a span {
+    cursor: pointer; 
+  }
