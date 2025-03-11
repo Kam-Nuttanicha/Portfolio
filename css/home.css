@@ -4,16 +4,19 @@ body {
     padding: 0;
     overflow: auto;
     color: #03038d;
-    background:  #fcf2dd;
+    background: #fcf2dd;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header Styling */
 header {
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    background: linear-gradient(to bottom,  #1d61ff ,#3c8af8);
+    background: linear-gradient(to bottom, #1d61ff, #3c8af8);
     color: #ffffff;
     padding: 15px;
     text-align: center;
@@ -24,12 +27,12 @@ header ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* ให้ ul อยู่ในแนวเดียวกัน */
+    display: flex;
 }
 
 header ul li {
-    margin: 0 15px; /* กำหนดระยะห่างของเมนู */
-    display: inline-block; /* ให้เป็นบรรทัดเดียวกัน */
+    margin: 0 15px;
+    display: inline-block;
 }
 
 header ul li a {
@@ -42,14 +45,13 @@ header ul li a {
     position: absolute;
     left: 20px;
     top: 50%;
-    transform: translateY(-50%); /* จัดให้ไอคอนอยู่ตรงกลางของ header */
+    transform: translateY(-50%);
 }
 
 .home-icon a {
     color: white;
     font-size: 24px;
 }
-
 
 /* Navigation Menu */
 nav ul {
@@ -71,29 +73,18 @@ nav ul li a {
 /* Main Content */
 .container {
     display: flex;
+    flex-wrap: wrap;
     width: 80%;
     margin: 50px auto;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
 }
 
 .left {
     flex: 1;
     padding: 20px;
-}
-
-.left h1 {
-    font-size: 36px;
-    color: #333;
-}
-
-.left p, .left ul {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.left ul {
-    padding-left: 20px;
+    text-align: left;
 }
 
 .right {
@@ -116,7 +107,8 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    background: linear-gradient(to bottom,  #51c5ff ,#2f6aff);
+    background: linear-gradient(to bottom, #51c5ff, #2f6aff);
+    margin-top: auto;
 }
 
 footer a {
@@ -130,12 +122,37 @@ footer a:hover {
     color: #ffcc00;
 }
 
-/* Social Media Icons */
-.social-links {
-    margin-top: 10px;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: center;
+        padding: 10px;
+    }
 
-.social-links a {
-    margin: 0 10px;
-    font-size: 24px;
+    nav ul {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left, .right {
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .right img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
 }
