@@ -259,7 +259,7 @@ html {
 }
 
 .link-button1:hover {
-    background-color: #f37f12;
+    background-color: #e2c153;
 }
 @media (max-width: 800px) {
     .video1, .pdf-viewer {

@@ -290,7 +290,7 @@ html {
 }
 
 .link-button:hover {
-    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
+    background-color: #77d927; /* สีเขียวเข้มเมื่อ hover */
 }
 .center-content {
     display: flex;

@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuttanicha web</title>
+    <title>Nuttanicha Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+    <!-- Background Animation -->
+    <div class="character">
+        <div class="eyes">
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="eye">
+                <div class="pupil"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Overlay Section -->
     <div id="overlay">
         <img src="Pic/Web-pic2.gif" id="pic1" class="overlay-img">
@@ -60,6 +72,9 @@
             </a>
         </div>
     </footer>
+</body>
+</html>
+
 
     <script>
         function hideImages() {
@@ -67,6 +82,75 @@
             document.querySelector('.container').style.display = 'flex';
             document.querySelector('footer').style.display = 'block';
         }
+        // ดึง element
+const character = document.querySelector('.character');
+const eyes = document.querySelectorAll(".eye");
+const pupils = document.querySelectorAll(".pupil");
+
+// เริ่มต้นตำแหน่งและความเร็ว
+let posX = window.innerWidth / 2;
+let posY = window.innerHeight / 2;
+let speedX = 0.5; // ปรับให้ช้าลง
+let speedY = 0.5;
+
+// อัปเดตตำแหน่งตัวละครทุก frame
+function moveCharacter() {
+    posX += speedX;
+    posY += speedY;
+
+    const charWidth = character.offsetWidth;
+    const charHeight = character.offsetHeight;
+
+    // ขอบซ้าย-ขวา
+    if (posX <= 0) {
+        posX = 0;
+        speedX *= -1;
+    } else if (posX + charWidth >= window.innerWidth) {
+        posX = window.innerWidth - charWidth;
+        speedX *= -1;
+    }
+
+    // ขอบบน-ล่าง
+    if (posY <= 0) {
+        posY = 0;
+        speedY *= -1;
+    } else if (posY + charHeight >= window.innerHeight) {
+        posY = window.innerHeight - charHeight;
+        speedY *= -1;
+    }
+
+    // อัปเดตตำแหน่งใน DOM
+    character.style.left = `${posX}px`;
+    character.style.top = `${posY}px`;
+
+    requestAnimationFrame(moveCharacter);
+}
+
+// ให้ตาตามเมาส์
+document.addEventListener("mousemove", (event) => {
+    let { clientX: mouseX, clientY: mouseY } = event;
+
+    eyes.forEach((eye, index) => {
+        let eyeRect = eye.getBoundingClientRect();
+        let eyeX = eyeRect.left + eyeRect.width / 2;
+        let eyeY = eyeRect.top + eyeRect.height / 2;
+
+        let deltaX = mouseX - eyeX;
+        let deltaY = mouseY - eyeY;
+
+        let angle = Math.atan2(deltaY, deltaX);
+
+        let distance = 10; // ระยะที่รูม่านตาจะเคลื่อน
+        let moveX = Math.cos(angle) * distance;
+        let moveY = Math.sin(angle) * distance;
+
+        pupils[index].style.transform = `translate(${moveX}px, ${moveY}px)`;
+    });
+});
+
+// เริ่ม animation
+moveCharacter();
+
     </script>
 </body>
 </html>

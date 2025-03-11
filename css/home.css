@@ -156,3 +156,49 @@ footer a:hover {
         border-radius: 50%;
     }
 }
+/* ตัวละคร */
+.character {
+    width: 150px;
+    height: 150px;
+    background: #ffcc80;
+    border-radius: 50%;
+    position: fixed; /* ใช้ fixed เพื่อให้ตัวละครอยู่ข้างหลัง */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* ส่งตัวละครไปอยู่ข้างหลัง */
+    pointer-events: none; /* ป้องกันไม่ให้ตัวละครบังการคลิก */
+}
+
+
+/* ดวงตา */
+.eyes {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+}
+
+/* ดวงตาแต่ละข้าง */
+.eye {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* รูม่านตา */
+.pupil {
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.05s;
+}
