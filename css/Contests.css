@@ -111,7 +111,21 @@ footer a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 0 10px;
 }
+.image-row5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* เพิ่มระยะห่างระหว่างรูปภาพในแถวเดียวกัน */
+    margin-top: 20px; /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
 
+.image-row5 img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+}
 .image-slider {
     display: flex;
     align-items: center;
